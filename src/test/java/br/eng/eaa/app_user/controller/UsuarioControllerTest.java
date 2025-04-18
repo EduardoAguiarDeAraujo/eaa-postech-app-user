@@ -37,10 +37,20 @@ public class UsuarioControllerTest {
     public void saveUsuario() throws Exception {
         String json = """
                 {
-                    "nome":"Katia",
-                    "email":"katia@gmail.com",
-                    "login":"katia.ea",
-                    "senha":"304050"
+                    "nome":"Rebeca",
+                    "email":"rebeca@gmail.com",
+                    "login":"rebeca.ea",
+                    "senha":"304050",
+                    "endereco": {
+                        "logradouro": "Rua Nova de Julho",
+                        "numero":"3147",
+                        "complemento":"Apto 3512",
+                        "bairro":"Itaim",
+                        "cidade":"São Paulo",
+                        "estado":"SP",
+                        "cep": "01407-000"
+                    },
+                    "perfil": "PROPRIETARIO"
                 }
                 """;
         mockMvc.perform(post("/api/v1/usuarios")
@@ -69,9 +79,19 @@ public class UsuarioControllerTest {
         String json = """
                 {
                     "nome":"Eduardo",
-                    "email":"katia@gmail.com",
-                    "login":"katia.ea",
-                    "senha":"304050"
+                    "email":"eduardo@gmail.com",
+                    "login":"eduardo.ea",
+                    "senha":"304050",
+                    "endereco": {
+                        "logradouro": "Av. Treze de Maio",
+                        "numero":"3147",
+                        "complemento":"Apto 3512",
+                        "bairro":"Itaim",
+                        "cidade":"São Paulo",
+                        "estado":"SP",
+                        "cep": "01407-000"
+                    },
+                    "perfil": "PROPRIETARIO"
                 }
                 """;
         mockMvc.perform(put("/api/v1/usuarios/1")
