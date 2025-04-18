@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "4cbd809c-fee7-4441-bf0a-3edeb748c19c",
+		"name": "Postech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25837497"
+	},
+	"item": [
+		{
+			"name": "App-User",
+			"item": [
+				{
+					"name": "Salvar Usuário Proprietário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Rebeca\",\r\n    \"email\":\"rebeca@gmail.com\",\r\n    \"login\":\"rebeca.ea\",\r\n    \"senha\":\"304050\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua Nova de Julho\",\r\n        \"numero\":\"3147\",\r\n        \"complemento\":\"Apto 3512\",\r\n        \"bairro\":\"Itaim\",\r\n        \"cidade\":\"São Paulo\",\r\n        \"estado\":\"SP\",\r\n        \"cep\": \"01407-000\"\r\n    },\r\n    \"perfil\": \"PROPRIETARIO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar Usuário Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Eduardo\",\r\n    \"email\":\"eduardo@gmail.com\",\r\n    \"login\":\"eduardo.ea\",\r\n    \"senha\":\"304050\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Av. Treze de Maio\",\r\n        \"numero\":\"3147\",\r\n        \"complemento\":\"Apto 3512\",\r\n        \"bairro\":\"Itaim\",\r\n        \"cidade\":\"São Paulo\",\r\n        \"estado\":\"SP\",\r\n        \"cep\": \"01407-000\"\r\n    },\r\n    \"perfil\": \"CLIENTE\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar Usuário Já Existente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Rebeca\",\r\n    \"email\":\"rebeca@gmail.com\",\r\n    \"login\":\"rebeca.ea\",\r\n    \"senha\":\"304050\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua Nova de Julho\",\r\n        \"numero\":\"3147\",\r\n        \"complemento\":\"Apto 3512\",\r\n        \"bairro\":\"Itaim\",\r\n        \"cidade\":\"São Paulo\",\r\n        \"estado\":\"SP\",\r\n        \"cep\": \"01407-000\"\r\n    },\r\n    \"perfil\": \"PROPRIETARIO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar Usuário Perfil Incorreto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Katia\",\r\n    \"email\":\"katia@gmail.com\",\r\n    \"login\":\"katia.ea\",\r\n    \"senha\":\"304050\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Av. Treze de Maio\",\r\n        \"numero\":\"3147\",\r\n        \"complemento\":\"Apto 3512\",\r\n        \"bairro\":\"Itaim\",\r\n        \"cidade\":\"São Paulo\",\r\n        \"estado\":\"SP\",\r\n        \"cep\": \"01407-000\"\r\n    },\r\n    \"perfil\": \"ADMIN\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\":\"rebeca.ea\",\r\n    \"senha\":\"304050\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Senha Inválida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\":\"rebeca.ea\",\r\n    \"senha\":\"XXXXXX\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios?page=0&size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuário por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuário por ID Inexistente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios/9999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Eduardo\",\r\n    \"email\":\"eduardo@gmail.com\",\r\n    \"login\":\"eduardo.ea\",\r\n    \"senha\":\"304050\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Av. Treze de Maio\",\r\n        \"numero\":\"3147\",\r\n        \"complemento\":\"Apto 3512\",\r\n        \"bairro\":\"Itaim\",\r\n        \"cidade\":\"São Paulo\",\r\n        \"estado\":\"SP\",\r\n        \"cep\": \"01407-000\"\r\n    },\r\n    \"perfil\": \"PROPRIETARIO\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
